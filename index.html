@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kind Word Here</title>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      color: #444;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0 20px;
+      text-align: center;
+    }
+    .phrase {
+      font-size: 2.5rem;
+      margin: 0 auto 2rem;
+      max-width: 600px;
+      line-height: 1.4;
+      color: #333;
+    }
+    footer {
+      font-size: 1rem;
+      color: #888;
+      position: fixed;
+      bottom: 10px;
+      text-align: center;
+      width: 100%;
+    }
+    footer a {
+      color: #888;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 5px;
+    }
+    footer a:hover {
+      color: #555;
+    }
+    @media (max-width: 600px) {
+      .phrase {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="phrase" id="phrase">Chargement...</div>
+
+  <footer>
+    Passe une bonne journée <a href="https://instagram.com/kindwordhere" target="_blank" rel="noopener noreferrer">C.E</a>
+  </footer>
+
+  <script>
+    const phrases = [
+      "T’as un charme fou.",
+      "J’aime ton style.",
+      "Vraiment cool ce que tu dégages.",
+      "T’as une vibe qui claque.",
+      "Tu rayonnes ce soir.",
+      "C’est top de te voir.",
+      "T’as une présence qui captive.",
+      "Cette énergie, elle fait plaisir.",
+      "T’es une bonne surprise.",
+      "J’adore ton naturel.",
+      "T’es une vibe positive.",
+      "Tu sais comment te faire remarquer.",
+      "T’as ce petit plus.",
+      "C’est agréable de te croiser.",
+      "T’es vraiment à ton aise.",
+      "Cette aura te va bien.",
+      "J’aime cette confiance tranquille.",
+      "Tu fais bouger la soirée.",
+      "T’as un regard qui en dit long.",
+      "C’est cool comme tu fais.",
+      "T’as un sourire contagieux.",
+      "J’aime ton énergie sincère.",
+      "T’es unique, franchement.",
+      "Tu dégages une vibe rare.",
+      "J’aime ton authenticité.",
+      "T’as un truc magnétique.",
+      "Ça se voit que t’es passionné·e.",
+      "T’es une vraie inspiration.",
+      "J’adore cette aura que tu as.",
+      "T’es franchement captivant·e."
+    ];
+
+    function afficherPhrase() {
+      const index = Math.floor(Math.random() * phrases.length);
+      document.getElementById('phrase').textContent = phrases[index];
+    }
+
+    afficherPhrase();
+  </script>
+</body>
+</html>
